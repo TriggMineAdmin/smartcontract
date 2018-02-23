@@ -35,7 +35,6 @@ contract FallbackToken {
 
   function isContract(address _addr) internal view returns (bool) {
     uint length;
-    _addr = _addr;
     assembly {length := extcodesize(_addr)}
     return (length > 0);
   }
